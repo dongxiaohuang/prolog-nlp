@@ -35,9 +35,11 @@ conj(Test) :-
 conj(Test) :- sentence(Test),\+member(and,Test).
 
 %encode()
-
-
-
+to_conn_code([as|c],[asc]).
+to_conn_code([as|b],[asb]).
+to_conn_code([al|g],[alg]).
+to_conn_code([dl|g],[dlg]).
+to_conn_code([dl|s],[dls]).
 
 encoder(Text,Acc,EncodedText) :-
 	Text = [Word|Rest],
